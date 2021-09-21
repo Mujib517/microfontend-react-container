@@ -1,12 +1,16 @@
 import React, { lazy, Suspense } from 'react';
+import ErrorBoundary from './ErrorBoundary';
 const UsersApp = lazy(() => import('users/UsersApp'))
+
 
 function App() {
   return (
     <div className="App">
+      <h1>App Shell</h1>
       <Suspense fallback={<div>Loading...</div>}>
-        <h1>App Shell</h1>
-        <UsersApp />
+        <ErrorBoundary>
+          <UsersApp />
+        </ErrorBoundary>
       </Suspense>
     </div>
   );
