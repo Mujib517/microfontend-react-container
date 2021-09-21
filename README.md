@@ -1,4 +1,5 @@
 # Micro font end host
 
-```npm install```
-```npm start```
+Install dependencies ```npm install```
+Build ```npm run pack```
+Run ```npm run serve```
